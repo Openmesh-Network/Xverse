@@ -3,24 +3,24 @@ MAKEFLAGS =? -s
 .PHONY = $(TARGETS) setup usage clean
 
 usage:
-	@$(MAKE) ${MFLAGS} -C docs usage
+	@$(MAKE) $(MFLAGS) -C docs usage
 
 all: clean setup build
 
 $(TARGETS):
-	@$(MAKE) ${MFLAGS} -C $@
+	@$(MAKE) $(MFLAGS) -C $@
 
 bin: src
 src: lib
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-build):
-	@$(MAKE) ${MFLAGS} -C $(subst -build,,$@) build
+	@$(MAKE) $(MFLAGS) -C $(subst -build,,$@) build
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-clean):
-	@$(MAKE) ${MFLAGS} -C $(subst -clean,,$@) clean
+	@$(MAKE) $(MFLAGS) -C $(subst -clean,,$@) clean
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-setup):
-	@$(MAKE) ${MFLAGS} -C $(subst -setup,,$@) setup
+	@$(MAKE) $(MFLAGS) -C $(subst -setup,,$@) setup
 
 build: $(foreach TARGET,$(TARGETS),$(TARGET)-build)
 	$(info Build complete.)
