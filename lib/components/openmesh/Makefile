@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: core decentralised-cloud-initiative xnode xnode-one
 
 .PHONY: build clean setup
 

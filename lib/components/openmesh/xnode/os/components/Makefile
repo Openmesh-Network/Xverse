@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: installers image-builders
 
 .PHONY: build clean setup
 

@@ -30,3 +30,5 @@ you look at random files in this project, you'll probably want to avoid it - for
 #### Usage
 
   To display usage documentation, execute `make usage`.
+
+### Atlas

@@ -1,19 +1,30 @@
 TARGETS = bin docs lib src
 
-.PHONY = any-target usage setup $(TARGETS)
+.PHONY = $(TARGETS) setup usage clean
 
-any-target: $(TARGETS)
+usage:
+	@$(MAKE) -s -C docs usage
 
 $(TARGETS):
-	$(MAKE) -C $@
+	@$(MAKE) -s -C $@
 
 bin: src
 src: lib
 
-setup:
-	@echo "Setup complete."
+$(foreach TARGET,$(TARGETS),$(TARGET)-build):
+	@$(MAKE) -s -C $(subst -build,'',$@) build
 
-usage:	docs
-	@cat docs/USAGE.txt
+$(foreach TARGET,$(TARGETS),$(TARGET)-clean):
+	@$(MAKE) -s -C $(subst -clean,'',$@) clean
 
-default: any-target
+$(foreach TARGET,$(TARGETS),$(TARGET)-setup):
+	@$(MAKE) -s -C $(subst -setup,'',$@) setup
+
+build: $(foreach TARGET,$(TARGETS),$(TARGET)-build)
+	$(info Build complete.)
+
+clean: $(foreach TARGET,$(TARGETS),$(TARGET)-clean)
+	$(info Clean complete.)
+
+setup: $(foreach TARGET,$(TARGETS),$(TARGET)-setup)
+	$(info Setup complete.)

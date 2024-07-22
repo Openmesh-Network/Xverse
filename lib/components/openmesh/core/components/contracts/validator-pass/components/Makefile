@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: nft-authoriser
 
 .PHONY: build clean setup
 

@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: assimilate
 
 .PHONY: build clean setup
 

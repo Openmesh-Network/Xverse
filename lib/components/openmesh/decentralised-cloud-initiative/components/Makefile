@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: contracts
 
 .PHONY: build clean setup
 

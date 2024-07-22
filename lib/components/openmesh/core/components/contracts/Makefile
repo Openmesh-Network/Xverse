@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: validator-pass
 
 .PHONY: build clean setup
 

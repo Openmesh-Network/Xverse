@@ -1,9 +1,11 @@
-TARGETS: components
+TARGETS: application infrastructure
 
 .PHONY: build clean setup
 
 $(TARGETS):
 	@$(MAKE) -s -C $@
+
+application: infrastructure
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-build):
 	@$(MAKE) -s -C $(subst -build,'',$@) build

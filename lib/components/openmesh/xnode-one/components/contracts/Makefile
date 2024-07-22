@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: xnode-unit-token
 
 .PHONY: build clean setup
 

@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: frontend
 
 .PHONY: build clean setup
 

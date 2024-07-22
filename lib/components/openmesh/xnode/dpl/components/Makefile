@@ -1,4 +1,4 @@
-TARGETS: components
+TARGETS: application infrastructure
 
 .PHONY: build clean setup
 
