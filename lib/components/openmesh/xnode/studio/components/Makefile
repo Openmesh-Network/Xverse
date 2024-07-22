@@ -3,18 +3,18 @@ TARGETS = frontend templates
 .PHONY: build clean setup
 
 $(TARGETS):
-	@$(MAKE) -s -C $@
+	@$(MAKE) ${MFLAGS} -C $@
 
 frontend: templates
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-build):
-	@$(MAKE) -s -C $(subst -build,'',$@) build
+	@$(MAKE) ${MFLAGS} -C $(subst -build,'',$@) build
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-clean):
-	@$(MAKE) -s -C $(subst -clean,'',$@) clean
+	@$(MAKE) ${MFLAGS} -C $(subst -clean,'',$@) clean
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-setup):
-	@$(MAKE) -s -C $(subst -setup,'',$@) setup
+	@$(MAKE) ${MFLAGS} -C $(subst -setup,'',$@) setup
 
 build: $(foreach TARGET,$(TARGETS),$(TARGET)-build)
 
