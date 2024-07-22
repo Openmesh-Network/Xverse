@@ -5,6 +5,8 @@ MAKEFLAGS =? -s
 usage:
 	@$(MAKE) ${MFLAGS} -C docs usage
 
+all: clean setup build
+
 $(TARGETS):
 	@$(MAKE) ${MFLAGS} -C $@
 
