@@ -1,0 +1,15 @@
+---
+on:
+  pull_request:
+  push:
+
+jobs:
+  lint-make:
+    name: Lint makefiles
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v3
+      - name: Make dry-run to check that Makefiles aren't grossly wrong
+        run: |
+          make -s -B --dry-run all
