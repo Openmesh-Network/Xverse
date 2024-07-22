@@ -1,4 +1,4 @@
-TARGETS: application infrastructure
+TARGETS = application infrastructure
 
 .PHONY: build clean setup
 

@@ -1,4 +1,4 @@
-TARGETS: contracts controller
+TARGETS = contracts controller
 
 .PHONY: build clean setup
 

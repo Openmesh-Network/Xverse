@@ -1,9 +1,11 @@
-TARGETS: frontend
+TARGETS = frontend templates
 
 .PHONY: build clean setup
 
 $(TARGETS):
 	@$(MAKE) -s -C $@
+
+frontend: templates
 
 $(foreach TARGET,$(TARGETS),$(TARGET)-build):
 	@$(MAKE) -s -C $(subst -build,'',$@) build

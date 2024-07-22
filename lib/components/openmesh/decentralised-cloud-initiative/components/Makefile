@@ -1,4 +1,4 @@
-TARGETS: contracts
+TARGETS = contracts
 
 .PHONY: build clean setup
 

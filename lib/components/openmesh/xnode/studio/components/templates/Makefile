@@ -1,4 +1,4 @@
-TARGETS = nft-authoriser
+TARGETS = collection
 
 .PHONY: build clean setup
 

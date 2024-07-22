@@ -1,4 +1,4 @@
-TARGETS: dpl os studio
+TARGETS = dpl os studio
 
 .PHONY: build clean setup
 

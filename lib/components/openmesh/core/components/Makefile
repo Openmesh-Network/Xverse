@@ -1,4 +1,4 @@
-TARGETS: application contracts resource-aggregation
+TARGETS = application contracts resource-aggregation
 
 .PHONY: build clean setup
 

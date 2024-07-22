@@ -1,4 +1,4 @@
-TARGETS: assimilate
+TARGETS = assimilate
 
 .PHONY: build clean setup
 

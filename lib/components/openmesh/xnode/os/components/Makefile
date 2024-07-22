@@ -1,4 +1,4 @@
-TARGETS: installers image-builders
+TARGETS = installers image-specs
 
 .PHONY: build clean setup
 

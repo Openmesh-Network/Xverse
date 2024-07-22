@@ -1,4 +1,4 @@
-TARGETS: xnode-unit-token
+TARGETS = xnode-unit-token
 
 .PHONY: build clean setup
 

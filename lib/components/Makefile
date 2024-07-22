@@ -1,4 +1,4 @@
-TARGETS: openmesh
+TARGETS = openmesh
 
 .PHONY: build clean setup
 

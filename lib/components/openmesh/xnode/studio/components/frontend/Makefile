@@ -1,4 +1,4 @@
-TARGETS: application
+TARGETS = application
 
 .PHONY: build clean setup
 

@@ -1,4 +1,4 @@
-TARGETS: validator-pass
+TARGETS = validator-pass
 
 .PHONY: build clean setup
 
