@@ -4,7 +4,7 @@ Xverse is a project to plan, create, maintain, and aggregate tools for creating,
 pocket universe instantiations of all openmesh network's infrastructure and projects for testing,
 experimentation, and/or research and development.
 
-### Production Ready? No. Dependable? No. - Not yet; Better half-baked than raw.
+### Production Ready? No. Dependable? No. - Not yet; We're working on it :)
 
 Temper your expectations - this project is alpha quality and is under active contstruction.
 We all try very hard to prevent it but it may, for some unexpected and unpredictable reason,
